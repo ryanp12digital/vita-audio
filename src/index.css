@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif-display: "Playfair Display", ui-serif, Georgia, serif;
   --color-vita-blue: #006dc4;
   --color-vita-blue-dark: #005aa0;
   --color-vita-orange: #ffb643;
@@ -56,5 +57,9 @@
 @layer utilities {
   .animate-vita-wa-pulse {
     animation: vita-wa-pulse 2.5s ease-in-out infinite;
+  }
+
+  .font-vita-serif {
+    font-family: var(--font-serif-display);
   }
 }

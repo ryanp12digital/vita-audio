@@ -1,12 +1,13 @@
 import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import {
-  ADDRESS_LINE,
+  ADDRESS_LINES,
   BUSINESS_HOURS,
   CALL_PHONE_DISPLAY,
   CALL_PHONE_HREF,
   CONTACT_EMAIL,
   FACEBOOK_URL,
   INSTAGRAM_URL,
+  MAP_EMBED_URL,
   WHATSAPP_DISPLAY,
 } from "../constants/site"
 import { container } from "../vita-tw"
@@ -50,37 +51,52 @@ export function Section12Footer() {
             </ul>
           </div>
 
-          <div className="rounded-xl bg-white/10 p-4">
-            <h3 className="mb-4 text-base font-semibold text-white">Contato</h3>
-            <ul className="space-y-2.5 text-sm text-white/90">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-vita-orange" aria-hidden />
-                <span>{ADDRESS_LINE}</span>
+          <div className="rounded-xl bg-white/10 p-5 lg:min-w-0">
+            <h3 className="mb-5 text-base font-semibold text-white">Contato</h3>
+            <ul className="flex flex-col gap-4 text-sm leading-snug text-white/90">
+              <li className="flex gap-3">
+                <span className="flex w-5 shrink-0 justify-center pt-0.5">
+                  <MapPin className="size-[18px] text-vita-orange" aria-hidden />
+                </span>
+                <span className="min-w-0 flex-1">
+                  {ADDRESS_LINES.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </span>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 size-4 shrink-0 text-vita-orange" aria-hidden />
-                <a href={CALL_PHONE_HREF} className="transition-colors hover:text-vita-orange">
+              <li className="flex gap-3">
+                <span className="flex w-5 shrink-0 justify-center pt-0.5">
+                  <Phone className="size-[18px] text-vita-orange" aria-hidden />
+                </span>
+                <a
+                  href={CALL_PHONE_HREF}
+                  className="min-w-0 flex-1 whitespace-nowrap transition-colors hover:text-vita-orange"
+                >
                   {CALL_PHONE_DISPLAY}
                 </a>
               </li>
-              <li className="flex items-start gap-2.5">
-                <MessageCircle
-                  className="mt-0.5 size-4 shrink-0 text-vita-orange"
-                  aria-hidden
-                />
+              <li className="flex gap-3">
+                <span className="flex w-5 shrink-0 justify-center pt-0.5">
+                  <MessageCircle className="size-[18px] text-vita-orange" aria-hidden />
+                </span>
                 <button
                   type="button"
                   onClick={openWhatsAppLeadPopup}
-                  className="transition-colors hover:text-vita-orange"
+                  className="min-w-0 flex-1 text-left transition-colors hover:text-vita-orange"
                 >
-                  {WHATSAPP_DISPLAY} (WhatsApp)
+                  <span className="whitespace-nowrap">{WHATSAPP_DISPLAY}</span>
+                  <span className="text-white/80"> (WhatsApp)</span>
                 </button>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 size-4 shrink-0 text-vita-orange" aria-hidden />
+              <li className="flex gap-3">
+                <span className="flex w-5 shrink-0 justify-center pt-0.5">
+                  <Mail className="size-[18px] text-vita-orange" aria-hidden />
+                </span>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="transition-colors hover:text-vita-orange"
+                  className="min-w-0 flex-1 wrap-break-word transition-colors hover:text-vita-orange"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -95,6 +111,17 @@ export function Section12Footer() {
               <span>{BUSINESS_HOURS}</span>
             </div>
           </div>
+        </div>
+
+        <div className="mt-6 overflow-hidden rounded-xl border border-white/20 bg-white/5 shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
+          <iframe
+            title="Localização Vita Audio — Indaiatuba"
+            src={MAP_EMBED_URL}
+            className="h-[220px] w-full border-0 md:h-[280px]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
 
         <div className="flex flex-col items-center justify-between gap-5 pt-6 text-center md:flex-row md:text-left">
