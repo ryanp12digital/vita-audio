@@ -25,17 +25,11 @@ export function Section02Hero() {
       />
       <div className={`relative z-10 ${container} grid w-full grid-cols-1 items-center`}>
         <div className="max-w-[560px] max-md:rounded-2xl max-md:bg-white/55 max-md:p-5 max-md:backdrop-blur-[2px]">
-          <h1 className="mb-4 text-[28px] font-semibold leading-snug text-[#003060] max-[600px]:text-[22px] md:text-[32px] md:text-[#004080] [text-shadow:0_1px_0_rgba(255,255,255,0.9),0_0_24px_rgba(255,255,255,0.75)] max-md:[text-shadow:0_1px_2px_rgba(255,255,255,0.95)]">
-            Recupere Sua Audição,
-            <br />
-            Reconquiste Sua Vida!
-            <br />
-            Aparelhos auditivos com
-            <br />
-            até 45% de desconto
+          <h1 className="mb-4 text-[28px] font-semibold leading-snug text-[#003060] max-[600px]:text-[28px] md:text-[32px] md:text-[#004080] ">
+          Está com Dificuldade para Ouvir ou Zumbido no Ouvido?
           </h1>
-          <p className="mb-7 text-[15px] font-medium leading-relaxed text-neutral-900 max-md:text-neutral-950 [text-shadow:0_1px_0_rgba(255,255,255,0.85)] max-md:[text-shadow:0_1px_1px_rgba(255,255,255,0.9)] md:text-neutral-800">
-            Resolva seus problemas de audição e zumbido no ouvido de uma vez por todas!
+          <p className="mb-7 text-[18px] font-medium leading-relaxed text-neutral-900 max-md:text-neutral-950  md:text-neutral-800">
+          Agende um teste auditivo e descubra a melhor solução para sua audição.
           </p>
           <button type="button" onClick={openWhatsAppLeadPopup} className={btnCta}>
             <WhatsAppIcon className={btnIco} size={18} />
