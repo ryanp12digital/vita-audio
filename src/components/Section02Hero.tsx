@@ -11,12 +11,12 @@ const heroBackgroundImage = `linear-gradient(
   rgba(239, 244, 249, 0.32) 76%,
   rgba(239, 244, 249, 0.1) 92%,
   rgba(239, 244, 249, 0.03) 100%
-), url("/images/F.png")`
+), url("/images/hero-section-audi-v1.webp")`
 
 export function Section02Hero() {
   return (
     <section
-      className="relative flex min-h-[720px] items-center bg-[#eff4f9] bg-cover bg-center bg-no-repeat py-12 pb-16"
+      className="relative flex min-h-[620px] items-center bg-[#eff4f9] bg-cover bg-no-repeat py-12 pb-16 bg-position-[58%_center] md:bg-[position:right_center] lg:bg-center"
       style={{ backgroundImage: heroBackgroundImage }}
     >
       <div

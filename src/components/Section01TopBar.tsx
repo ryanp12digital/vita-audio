@@ -1,4 +1,5 @@
 import { container } from "../vita-tw"
+import { openWhatsAppLeadPopup } from "../utils/whatsappLeadPopup"
 
 function getTomorrowDateInSaoPaulo() {
   const now = new Date()
@@ -29,7 +30,14 @@ export function Section01TopBar() {
     <div className="sticky top-0 z-[1000] bg-vita-blue py-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.15)]">
       <div className={`${container} text-center`}>
         <p className="text-sm font-semibold leading-snug text-white md:text-base">
-          {`⏰ SÓ ATÉ AMANHÃ (${tomorrowDate}): Ganhe consulta gratuita e até 45% de desconto nos aparelhos auditivos. Agende agora!`}
+          {`⏰ SÓ ATÉ AMANHÃ (${tomorrowDate}): Ganhe consulta gratuita e até 45% de desconto nos aparelhos auditivos. `}
+          <button
+            type="button"
+            onClick={openWhatsAppLeadPopup}
+            className="underline decoration-white/75 underline-offset-2 transition hover:text-vita-orange"
+          >
+            Agende agora!
+          </button>
         </p>
       </div>
     </div>
