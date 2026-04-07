@@ -4,35 +4,35 @@ import {
   GOOGLE_REVIEWS_COUNT_LABEL,
   GOOGLE_REVIEWS_RATING,
 } from "../constants/site"
-import { container } from "../vita-tw"
+import { btnCta, btnIco, container } from "../vita-tw"
 import { openWhatsAppLeadPopup } from "../utils/whatsappLeadPopup"
 import { WhatsAppIcon } from "./WhatsAppIcon"
 
-/** Textos espelham o Google Meu Negócio — atualize quando houver novas avaliações no perfil. */
-const googleReviews: { quote: string; name: string; date: string }[] = [
+/** Comentários reais do Google Meu Negócio — atualize quando quiser destacar outras avaliações. */
+const googleReviews: { quote: string; initial: string; avatarClass: string }[] = [
   {
     quote:
-      "Atendimento excelente e muita paciência na adaptação do aparelho. Recomendo a Vita Audio de olhos fechados.",
-    name: "Cliente verificado",
-    date: "2 semanas atrás",
+      "Tem várias opções de produtos e o lugar é bem confortável.",
+    initial: "V",
+    avatarClass: "bg-vita-blue text-white",
   },
   {
     quote:
-      "Equipe muito profissional. Explicaram tudo com clareza e o resultado na audição superou minhas expectativas.",
-    name: "Cliente verificado",
-    date: "1 mês atrás",
+      "Atendimento excelente desde a recepção até a Dra Tayla, profissional incrível.",
+    initial: "L",
+    avatarClass: "bg-vita-blue-dark text-white",
   },
   {
     quote:
-      "Clínica organizada, aparelhos de qualidade e suporte depois da compra. Estou muito satisfeita.",
-    name: "Cliente verificado",
-    date: "1 mês atrás",
+      "Queria agradecer o atendimento, ótimo atendimento, ótimo produto recomendo.",
+    initial: "N",
+    avatarClass: "bg-vita-orange text-vita-text",
   },
 ]
 
 function Stars({ className }: { className?: string }) {
   return (
-    <div className={`flex gap-0.5 text-[#c9a047] ${className ?? ""}`} aria-hidden>
+    <div className={`flex gap-0.5 text-vita-orange ${className ?? ""}`} aria-hidden>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className="size-4 fill-current" strokeWidth={0} />
       ))}
@@ -42,55 +42,63 @@ function Stars({ className }: { className?: string }) {
 
 export function Section10bGoogleReviews() {
   return (
-    <section className="bg-white py-[72px]">
+    <section className="bg-vita-gray-bg py-[70px]">
       <div className={container}>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-vita-serif text-[26px] font-semibold tracking-tight text-neutral-900 md:text-[30px]">
-            <span className="text-neutral-900">Avaliações no </span>
-            <span className="text-[#b8952f]">Google</span>
+          <h2 className="font-vita-serif text-[26px] font-semibold tracking-tight text-vita-text md:text-[30px]">
+            <span>Avaliações no </span>
+            <span className="text-vita-blue">Google</span>
           </h2>
           <div className="mt-4 flex flex-col items-center gap-1">
             <div className="flex items-center gap-2">
               <Stars />
-              <span className="text-lg font-bold text-neutral-900">{GOOGLE_REVIEWS_RATING}</span>
+              <span className="text-lg font-bold text-vita-text">{GOOGLE_REVIEWS_RATING}</span>
             </div>
-            <p className="text-sm text-neutral-500">{GOOGLE_REVIEWS_COUNT_LABEL}</p>
+            <p className="text-sm text-vita-text-mid">{GOOGLE_REVIEWS_COUNT_LABEL}</p>
           </div>
           <a
             href={GOOGLE_BUSINESS_REVIEWS_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#b8952f] underline decoration-[#b8952f]/50 underline-offset-4 transition hover:text-[#9a7d28]"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-vita-blue underline decoration-vita-blue/35 underline-offset-4 transition hover:text-vita-blue-dark hover:decoration-vita-blue-dark/50"
           >
-            Ver todas as avaliações
+            Ver todos os comentários do Google
             <ExternalLink className="size-4 shrink-0" aria-hidden />
           </a>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-[1100px] grid-cols-1 gap-4 md:grid-cols-3">
           {googleReviews.map((r, i) => (
             <article
               key={i}
-              className="flex flex-col rounded-2xl border border-neutral-200/90 bg-white p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+              className="flex flex-col rounded-lg border-l-[3px] border-vita-orange bg-white p-5 shadow-[0_2px_16px_rgba(0,109,196,0.08)]"
             >
               <Stars className="mb-4" />
-              <p className="flex-1 text-sm leading-relaxed text-neutral-600">&ldquo;{r.quote}&rdquo;</p>
-              <div className="mt-5 flex items-end justify-between gap-3 border-t border-neutral-100 pt-4">
-                <span className="text-sm font-semibold text-neutral-900">{r.name}</span>
-                <span className="shrink-0 text-xs text-neutral-500">{r.date}</span>
+              <p className="flex-1 text-[13px] leading-relaxed text-vita-text-mid">
+                &ldquo;{r.quote}&rdquo;
+              </p>
+              <div className="mt-5 flex items-center justify-between gap-3 border-t border-vita-blue/12 pt-4">
+                <div className="flex min-w-0 items-center gap-2.5">
+                  <span
+                    className={`flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ${r.avatarClass}`}
+                    aria-hidden
+                  >
+                    {r.initial}
+                  </span>
+                  <span className="text-[13px] font-semibold text-vita-text">
+                    Cliente verificado
+                  </span>
+                </div>
+                <span className="shrink-0 text-xs text-vita-text-mid">Google</span>
               </div>
             </article>
           ))}
         </div>
 
         <div className="mt-12 flex justify-center">
-          <button
-            type="button"
-            onClick={openWhatsAppLeadPopup}
-            className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#d4af37] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-neutral-900 shadow-sm transition hover:bg-[#c9a047]"
-          >
-            <WhatsAppIcon className="shrink-0" size={20} />
-            Agende agora!
+          <button type="button" onClick={openWhatsAppLeadPopup} className={btnCta}>
+            <WhatsAppIcon className={btnIco} size={18} />
+            <span>AGENDE AGORA!</span>
           </button>
         </div>
       </div>
