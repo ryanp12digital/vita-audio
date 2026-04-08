@@ -9,6 +9,7 @@ import {
   GOOGLE_BUSINESS_REVIEWS_URL,
   INSTAGRAM_URL,
   MAP_EMBED_URL,
+  P12_DIGITAL_SITE_URL,
   WHATSAPP_CHAT_URL,
   WHATSAPP_DISPLAY,
 } from "../constants/site"
@@ -183,6 +184,22 @@ export function Section12Footer() {
 
         <div className="mt-5 border-t border-white/20 pt-4 text-center text-xs text-white/80">
           <p>© 2026 Vita Audio. Todos os direitos reservados.</p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2.5">
+            <span className="text-white/75">Site desenvolvido por:</span>
+            <a
+              href={P12_DIGITAL_SITE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex transition-opacity hover:opacity-90"
+              aria-label="P12 Digital — abrir site"
+            >
+              <img
+                src="/images/logotipo_p12.png"
+                alt="P12 Digital"
+                className="h-7 w-auto object-contain sm:h-8"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

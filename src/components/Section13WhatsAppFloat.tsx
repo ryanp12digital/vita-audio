@@ -20,7 +20,6 @@ function formatPhone(value: string) {
 export function Section13WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
   const [nome, setNome] = useState("")
-  const [email, setEmail] = useState("")
   const [whats, setWhats] = useState("")
   const [consent, setConsent] = useState(true)
 
@@ -38,7 +37,6 @@ export function Section13WhatsAppFloat() {
     const mensagem = [
       "Olá! Vim do site e quero atendimento.",
       `Nome: ${nome}`,
-      `E-mail: ${email}`,
       `DDD + WhatsApp: ${digits || whats}`,
     ].join("\n")
 
@@ -84,20 +82,6 @@ export function Section13WhatsAppFloat() {
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
                   placeholder="Seu nome completo"
-                  className="w-full rounded-xl border border-[#d3dfec] bg-[#fbfdff] px-3.5 py-2.5 text-sm text-vita-text outline-none transition placeholder:text-neutral-400 focus:border-vita-blue focus:bg-white"
-                />
-              </label>
-
-              <label className="block space-y-1.5">
-                <span className="text-xs font-semibold tracking-wide text-vita-blue/80">
-                  E-mail
-                </span>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="voce@email.com"
                   className="w-full rounded-xl border border-[#d3dfec] bg-[#fbfdff] px-3.5 py-2.5 text-sm text-vita-text outline-none transition placeholder:text-neutral-400 focus:border-vita-blue focus:bg-white"
                 />
               </label>

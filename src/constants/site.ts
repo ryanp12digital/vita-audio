@@ -34,6 +34,9 @@ export const INSTAGRAM_URL = "https://www.instagram.com/vitaaudiobrasil/"
 export const FACEBOOK_URL =
   "https://www.facebook.com/profile.php?id=61558805426979"
 
+/** Crédito no rodapé — agência / desenvolvimento. */
+export const P12_DIGITAL_SITE_URL = "https://sites.p12digital.com.br/"
+
 /** Página de busca / ficha Google — use para “Ver todas as avaliações”. Atualize com o link direto do Maps se preferir. */
 export const GOOGLE_BUSINESS_REVIEWS_URL =
   "https://www.google.com/search?q=vita+audio&oq=vita+au&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMg0IARAuGK8BGMcBGIAEMgYIAhBFGDkyCAgDEEUYJxg7MgkIBBBFGDsYgAQyBwgFEAAYgAQyBggGEEUYPDIGCAcQRRg90gEIMTE3NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
