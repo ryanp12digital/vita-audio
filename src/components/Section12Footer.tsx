@@ -6,6 +6,7 @@ import {
   CALL_PHONE_HREF,
   CONTACT_EMAIL,
   FACEBOOK_URL,
+  GOOGLE_BUSINESS_REVIEWS_URL,
   INSTAGRAM_URL,
   MAP_EMBED_URL,
   WHATSAPP_CHAT_URL,
@@ -58,13 +59,18 @@ export function Section12Footer() {
                 <span className="flex w-5 shrink-0 justify-center pt-0.5">
                   <MapPin className="size-[18px] text-vita-orange" aria-hidden />
                 </span>
-                <span className="min-w-0 flex-1">
+                <a
+                  href={GOOGLE_BUSINESS_REVIEWS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="min-w-0 flex-1 transition-colors hover:text-vita-orange"
+                >
                   {ADDRESS_LINES.map((line) => (
                     <span key={line} className="block">
                       {line}
                     </span>
                   ))}
-                </span>
+                </a>
               </li>
               <li className="flex gap-3">
                 <span className="flex w-5 shrink-0 justify-center pt-0.5">
