@@ -7,12 +7,22 @@ import {
 } from "../utils/whatsappLeadPopup"
 import { WhatsAppIcon } from "./WhatsAppIcon"
 
+function formatPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 11)
+
+  if (digits.length <= 2) return digits
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+  if (digits.length <= 10) return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`
+
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`
+}
+
 export function Section13WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [whats, setWhats] = useState("")
-  const [consent, setConsent] = useState(false)
+  const [consent, setConsent] = useState(true)
 
   useEffect(() => {
     const handleOpen = () => setIsOpen(true)
@@ -100,8 +110,11 @@ export function Section13WhatsAppFloat() {
                   type="tel"
                   required
                   value={whats}
-                  onChange={(e) => setWhats(e.target.value)}
+                  onChange={(e) => setWhats(formatPhone(e.target.value))}
                   placeholder="(19) 99880-6076"
+                  inputMode="numeric"
+                  autoComplete="tel"
+                  maxLength={15}
                   className="w-full rounded-xl border border-[#d3dfec] bg-[#fbfdff] px-3.5 py-2.5 text-sm text-vita-text outline-none transition placeholder:text-neutral-400 focus:border-vita-blue focus:bg-white"
                 />
               </label>
