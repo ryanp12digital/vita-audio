@@ -24,15 +24,10 @@ export function Section09Conheca() {
             clínica e inicie sua jornada com quem leva a sua audição a sério.
           </p>
         </div>
-        <div className="order-first flex flex-col gap-5 md:order-none">
+        <div className="order-first md:order-0">
           <img
             src="/images/F.png"
             alt="Fachada da Vita Audio — aparelhos auditivos"
-            className="block w-full rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
-          />
-          <img
-            src="/images/mapa.png"
-            alt="Mapa de localização da Vita Audio em Indaiatuba"
             className="block w-full rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
           />
         </div>
