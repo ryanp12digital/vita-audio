@@ -10,7 +10,7 @@ import {
   INSTAGRAM_URL,
   MAP_EMBED_URL,
   P12_DIGITAL_SITE_URL,
-  WHATSAPP_CHAT_URL,
+  WHATSAPP_FOOTER_URL,
   WHATSAPP_DISPLAY,
 } from "../constants/site"
 import { container } from "../vita-tw"
@@ -89,7 +89,7 @@ export function Section12Footer() {
                   <MessageCircle className="size-[18px] text-vita-orange" aria-hidden />
                 </span>
                 <a
-                  href={WHATSAPP_CHAT_URL}
+                  href={WHATSAPP_FOOTER_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="min-w-0 flex-1 text-left transition-colors hover:text-vita-orange"
@@ -142,7 +142,7 @@ export function Section12Footer() {
         <div className="flex flex-col items-center justify-between gap-5 pt-6 text-center md:flex-row md:text-left">
           <div className="flex gap-3">
             <a
-              href={WHATSAPP_CHAT_URL}
+              href={WHATSAPP_FOOTER_URL}
               target="_blank"
               rel="noreferrer"
               className="flex size-10 items-center justify-center rounded-lg bg-[#25D366] text-white transition-opacity hover:opacity-[0.85]"

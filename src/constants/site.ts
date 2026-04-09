@@ -1,6 +1,9 @@
 /** Links e contactos centralizados */
 export const WHATSAPP_URL = "https://wa.me/message/5V24WTVNCMCXE1"
 export const WHATSAPP_CHAT_URL = "https://wa.me/5519998806076"
+export const WHATSAPP_FOOTER_URL = `${WHATSAPP_CHAT_URL}?text=${encodeURIComponent(
+  "Olá! Vim pelo site e gostaria de atendimento.",
+)}`
 export const PHONE_HREF = "tel:+551999880-6076"
 export const PHONE_DISPLAY = "(19) 99017-7608 (19) 3894-6349"
 export const CALL_PHONE_DISPLAY = "(19) 3894-6349"
@@ -21,13 +24,13 @@ export const MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponen
   "R. Tuiuti, 460 - Cidade Nova I, Indaiatuba - SP, 13339-010",
 )}&output=embed&z=16&hl=pt`
 export const BUSINESS_HOURS = [
+  { day: "segunda-feira", hours: "08:30–18:00" },
+  { day: "terça-feira", hours: "08:30–18:00" },
   { day: "quarta-feira", hours: "08:30–18:00" },
   { day: "quinta-feira", hours: "08:30–18:00" },
   { day: "sexta-feira", hours: "08:30–18:00" },
   { day: "sábado", hours: "08:00–12:00" },
   { day: "domingo", hours: "Fechado" },
-  { day: "segunda-feira", hours: "08:30–18:00" },
-  { day: "terça-feira", hours: "08:30–18:00" },
 ] as const
 
 export const INSTAGRAM_URL = "https://www.instagram.com/vitaaudiobrasil/"

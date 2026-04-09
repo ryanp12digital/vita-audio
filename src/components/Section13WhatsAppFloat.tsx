@@ -43,6 +43,7 @@ export function Section13WhatsAppFloat() {
     const url = `${WHATSAPP_CHAT_URL}?text=${encodeURIComponent(mensagem)}`
     window.open(url, "_blank", "noopener,noreferrer")
     setIsOpen(false)
+    window.location.href = "/obrigado"
   }
 
   return (
