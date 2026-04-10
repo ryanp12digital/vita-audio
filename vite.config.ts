@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-  base: "/aparelhosauditivos/indaiatuba/",
+  base: "/audiometria/",
   plugins: [react(), tailwindcss()],
 })

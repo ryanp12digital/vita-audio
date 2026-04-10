@@ -6,35 +6,35 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/aparelhosauditivos/indaiatuba",
+      "destination": "/audiometria",
       "permanent": true
     },
     {
       "source": "/obrigado",
-      "destination": "/aparelhosauditivos/indaiatuba/obrigado",
+      "destination": "/audiometria/obrigado",
       "permanent": false
     },
     {
-      "source": "/aparelhosauditivos/indaiatuba/",
-      "destination": "/aparelhosauditivos/indaiatuba",
+      "source": "/audiometria/",
+      "destination": "/audiometria",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/aparelhosauditivos/indaiatuba/assets/:path*",
+      "source": "/audiometria/assets/:path*",
       "destination": "/assets/:path*"
     },
     {
-      "source": "/aparelhosauditivos/indaiatuba/images/:path*",
+      "source": "/audiometria/images/:path*",
       "destination": "/images/:path*"
     },
     {
-      "source": "/aparelhosauditivos/indaiatuba/obrigado",
+      "source": "/audiometria/obrigado",
       "destination": "/index.html"
     },
     {
-      "source": "/aparelhosauditivos/indaiatuba",
+      "source": "/audiometria",
       "destination": "/index.html"
     }
   ]
