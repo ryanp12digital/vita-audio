@@ -6,35 +6,35 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/audiometria",
+      "destination": "/aparelho-auditivo",
       "permanent": true
     },
     {
       "source": "/obrigado",
-      "destination": "/audiometria/obrigado",
+      "destination": "/aparelho-auditivo/obrigado",
       "permanent": false
     },
     {
-      "source": "/audiometria/",
-      "destination": "/audiometria",
+      "source": "/aparelho-auditivo/",
+      "destination": "/aparelho-auditivo",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/audiometria/assets/:path*",
+      "source": "/aparelho-auditivo/assets/:path*",
       "destination": "/assets/:path*"
     },
     {
-      "source": "/audiometria/images/:path*",
+      "source": "/aparelho-auditivo/images/:path*",
       "destination": "/images/:path*"
     },
     {
-      "source": "/audiometria/obrigado",
+      "source": "/aparelho-auditivo/obrigado",
       "destination": "/index.html"
     },
     {
-      "source": "/audiometria",
+      "source": "/aparelho-auditivo",
       "destination": "/index.html"
     }
   ]
